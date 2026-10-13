@@ -1,0 +1,10 @@
+CREATE TABLE event_photos (
+    id UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+
+    event_id UNSIGNED NOT NULL,
+    image_path VARCHAR(500) NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (event_id) REFERENCES events(id)
+);

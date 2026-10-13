@@ -1,0 +1,12 @@
+CREATE TABLE fee_fines (
+    id  UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+
+    fee_id  UNSIGNED NOT NULL,
+
+    fine_amount DECIMAL(10,2) NOT NULL,
+    reason VARCHAR(255) NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (fee_id) REFERENCES fees(id)
+);
